@@ -5,7 +5,7 @@ export default function Login() {
   //   let navigate = useNavigate();
   return (
     <div>
-      Login will come here
+      <p>Login page </p>
       {/* <LoginForm
         onSubmit={() => {
           navigate("/user/dashboard");
