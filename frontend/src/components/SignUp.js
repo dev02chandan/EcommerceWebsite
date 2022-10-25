@@ -2,10 +2,8 @@ import React from "react";
 import "./login.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
 
-export default function Login() {
-  //   let navigate = useNavigate();
+function SignUp() {
   return (
     <div>
       <section class="h-100 gradient-form" style={{ backgroundColor: "#eee" }}>
@@ -22,11 +20,34 @@ export default function Login() {
                           style={{ width: "185px" }}
                           alt="logo"
                         />
-                        <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                        <h4 class="mt-1 mb-5 pb-1">
+                          Welcome to The Lotus Team
+                        </h4>
                       </div>
 
                       <form>
-                        <p>Please login to your account</p>
+                        <p>Please fill the following details:</p>
+
+                        <div class="form-outline mb-4">
+                          <input
+                            type="text"
+                            id="form2Example11"
+                            class="form-control"
+                            // placeholder="Phone number or email address"
+                            placeholder="Full Name"
+                          />
+                        </div>
+
+                        <div class="form-outline mb-4">
+                          <input
+                            type="text"
+                            inputMode="numeric"
+                            id="form2Example11"
+                            class="form-control"
+                            // placeholder="Phone number or email address"
+                            placeholder="Mobile Number"
+                          />
+                        </div>
 
                         <div class="form-outline mb-4">
                           <input
@@ -34,11 +55,8 @@ export default function Login() {
                             id="form2Example11"
                             class="form-control"
                             // placeholder="Phone number or email address"
-                            placeholder="Username"
+                            placeholder="Email ID"
                           />
-                          {/* <label class="form-label" for="form2Example11">
-                            Username
-                          </label> */}
                         </div>
 
                         <div class="form-outline mb-4">
@@ -48,35 +66,27 @@ export default function Login() {
                             class="form-control"
                             placeholder="Password"
                           />
-                          {/* <label class="form-label" for="form2Example22">
-                            Password
-                          </label> */}
                         </div>
 
-                        <div class="text-center pt-1 mb-5 pb-1">
-                          <button
-                            class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                            type="button"
-                          >
-                            Log in
-                          </button>
-                          <br />
-                          <a class="text-muted" href="#!">
-                            Forgot password?
-                          </a>
+                        <div class="form-outline mb-4">
+                          <input
+                            type="password"
+                            id="form2Example22"
+                            class="form-control"
+                            placeholder="Confirm Password"
+                          />
                         </div>
 
-                        <div class="d-flex align-items-center justify-content-center pb-4">
-                          <p class="mb-0 me-2">Don't have an account?</p>
-                          <Link to="/signup">
+                        <Link to="/">
+                          <div class="text-center pt-1 mb-5 pb-1">
                             <button
+                              class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
                               type="button"
-                              class="btn btn-outline-danger"
                             >
-                              Create new
+                              Create Your Account
                             </button>
-                          </Link>
-                        </div>
+                          </div>
+                        </Link>
                       </form>
                     </div>
                   </div>
@@ -102,6 +112,4 @@ export default function Login() {
   );
 }
 
-// function LoginForm() {
-//   return <div>Login Form comes here</div>;
-// }
+export default SignUp;
