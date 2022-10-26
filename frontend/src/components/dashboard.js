@@ -65,9 +65,9 @@ export default function Dashboard() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link h5" href="#!" onClick={handleClick}>
+                <div className="nav-link h5" onClick={handleClick}>
                   Shop
-                </a>
+                </div>
               </li>
             </ul>
             <form className="d-flex">
