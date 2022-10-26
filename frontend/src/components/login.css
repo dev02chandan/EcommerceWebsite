@@ -31,3 +31,22 @@
   /* box-shadow: 10px 10px 5px lightblue; */
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
+
+.new {
+  font-weight: 300;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.new:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  bottom: 0;
+  left: 25%;
+  border-image: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593) 30;
+  border-width: 4px;
+  border-style: solid;
+}

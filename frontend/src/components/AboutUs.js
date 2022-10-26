@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./login.css";
 
 function AboutUs() {
   return (
@@ -64,13 +65,54 @@ function AboutUs() {
       <div className="gradient-custom-2 py-5">
         <div className="container px-4 px-lg-5 my-5">
           <div className="text-center text-white">
-            <h1 className="display-4 fw-bolder">About The Lotus Team</h1>
-            <p className="lead fw-normal text-white-50 mb-0">
-              Keeping it simple
-            </p>
+            <h1 className="display-4 fw-bolder">About Us</h1>
+            <p className="lead fw-normal text-white-50 mb-0">The Lotus Team</p>
           </div>
         </div>
       </div>
+
+      {/* Mission and vision */}
+      <div
+        style={{
+          padding: 30,
+          paddingLeft: 100,
+          paddingRight: 100,
+          paddingTop: 60,
+        }}
+      >
+        <h1 className="display-5 fw-bolder new">Our Mission</h1>
+        <p className="lead fw-normal mb-0">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
+          nemo, in sapiente, soluta accusantium aliquam repellendus quod ipsum
+          maiores atque necessitatibus omnis perferendis eius labore magnam unde
+          porro, quibusdam neque velit vitae iusto doloribus nihil. Veritatis
+          expedita, laborum corporis commodi eaque porro enim minus voluptates
+          possimus voluptatibus sapiente in accusamus provident, vero doloribus.
+          Quos!.
+        </p>
+        <h1 className="display-5 fw-bolder new" style={{ marginTop: 70 }}>
+          Our Vision
+        </h1>
+        <p className="lead fw-normal mb-0">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+          obcaecati deserunt sint nulla possimus sit mollitia cumque omnis eaque
+          eveniet earum animi nihil ipsum illum veritatis esse, quas qui,
+          delectus, voluptatibus officiis enim magnam laborum dolorem. Quasi
+          amet ab autem porro ipsum eius facilis, iusto, ad voluptas sunt id
+          eligendi quas vitae voluptate quod est sint cum! Magnam nisi, vero
+          repellat mollitia odio eos molestias explicabo in vitae, deleniti
+          numquam!
+        </p>
+      </div>
+
+      {/* <!-- Footer--> */}
+      <footer className="py-5 gradient-custom-2" style={{ marginTop: "100px" }}>
+        <div className="container">
+          <p className="m-0 text-center text-white">
+            Copyright &copy; Your Website 2022
+          </p>
+        </div>
+      </footer>
     </>
   );
 }
