@@ -5,6 +5,7 @@ import PageNotFound from "./components/PageNotFound";
 
 import "./App.css";
 import SignUp from "./components/SignUp";
+import AboutUs from "./components/AboutUs";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/dashboard/:user" element={<Dashboard />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>

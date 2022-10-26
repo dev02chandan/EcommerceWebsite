@@ -1,8 +1,23 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import "./login.css";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
+
+import { useRef } from "react";
 
 export default function Dashboard() {
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   let params = useParams();
   return (
     <div>
@@ -43,44 +58,16 @@ export default function Dashboard() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link h5" href="#!">
-                  About
-                </a>
+                <Link to="/aboutus" style={{ textDecoration: "None" }}>
+                  <a className="nav-link h5" href="#!">
+                    About
+                  </a>
+                </Link>
               </li>
-              <li className="nav-item dropdown">
-                {/* Changed Link */}
-                <div
-                  className="nav-link dropdown-toggle h5"
-                  id="navbarDropdown"
-                  // href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+              <li className="nav-item">
+                <a className="nav-link h5" href="#!" onClick={handleClick}>
                   Shop
-                </div>
-                {/* Changed Link */}
-
-                {/* <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a className="dropdown-item" href="#!">
-                      All Products
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#!">
-                      Popular Items
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#!">
-                      New Arrivals
-                    </a>
-                  </li>
-                </ul> */}
+                </a>
               </li>
             </ul>
             <form className="d-flex">
@@ -100,7 +87,12 @@ export default function Dashboard() {
       <div className="gradient-custom-2 py-5">
         <div className="container px-4 px-lg-5 my-5">
           <div className="text-center text-white">
-            <h1 className="display-4 fw-bolder">Shop in style</h1>
+            <h1 className="display-4 fw-bolder">
+              Shop in style
+              {params.user === " "
+                ? ""
+                : `, ${capitalizeFirstLetter(params.user)}`}
+            </h1>
             <p className="lead fw-normal text-white-50 mb-0">
               With this shop hompeage template
             </p>
@@ -108,7 +100,7 @@ export default function Dashboard() {
         </div>
       </div>
       {/* <!-- Section--> */}
-      <section className="py-5">
+      <section className="py-5" ref={ref}>
         <div className="container px-4 px-lg-5 mt-5">
           <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <div className="col mb-5">

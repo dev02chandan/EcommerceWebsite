@@ -2,10 +2,17 @@ import React from "react";
 import "./login.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
+import { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   //   let navigate = useNavigate();
+  // const History = useHistory();
+  const [input, setInput] = useState("User");
+  // function GotoDashboard() {
+  //   History.push(`/dashboard/${input}`);
+  // }
   return (
     <div>
       <section class="h-100 gradient-form" style={{ backgroundColor: "#eee" }}>
@@ -35,6 +42,7 @@ export default function Login() {
                             class="form-control"
                             // placeholder="Phone number or email address"
                             placeholder="Username"
+                            onInput={(e) => setInput(e.target.value)}
                           />
                           {/* <label class="form-label" for="form2Example11">
                             Username
@@ -54,12 +62,14 @@ export default function Login() {
                         </div>
 
                         <div class="text-center pt-1 mb-5 pb-1">
-                          <button
-                            class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                            type="button"
-                          >
-                            Log in
-                          </button>
+                          <Link to={`/dashboard/${input}`}>
+                            <button
+                              class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                              type="button"
+                            >
+                              Log in
+                            </button>
+                          </Link>
                           <br />
                           <a class="text-muted" href="#!">
                             Forgot password?
