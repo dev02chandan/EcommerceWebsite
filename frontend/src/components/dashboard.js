@@ -53,15 +53,13 @@ export default function Dashboard() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
               <li className="nav-item">
-                <a className="nav-link active h5" aria-current="page" href="#!">
+                <div className="nav-link active h5" aria-current="page">
                   Home
-                </a>
+                </div>
               </li>
               <li className="nav-item">
                 <Link to="/aboutus" style={{ textDecoration: "None" }}>
-                  <a className="nav-link h5" href="#!">
-                    About
-                  </a>
+                  <div className="nav-link h5">About</div>
                 </Link>
               </li>
               <li className="nav-item">
