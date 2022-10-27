@@ -1,5 +1,5 @@
 import React from "react";
-import "./login.css";
+import "./components.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 // import { useHistory } from "react-router-dom";
