@@ -4,8 +4,13 @@ import "./components.css";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
-
+import { useEffect } from "react";
 import { useRef } from "react";
+import Axios from "axios"
+// var axios = require('axios');
+
+
+
 
 export default function Dashboard() {
   const ref = useRef(null);
@@ -17,8 +22,20 @@ export default function Dashboard() {
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
-
-  let params = useParams();
+  useEffect(() => {
+    Axios.defaults.withCredentials = true;
+    Axios.get("https://ecommerce-auth-app.herokuapp.com/auth-endpoint").then((response) => {
+        console.log(response.data)
+        if (response.data.loggedIn === true) {
+console.log("some")
+        }
+        // else
+        // {
+        //   window.location.replace("http://localhost:3000");
+        // }
+    });
+}, []);
+  // let params = useParams();
   return (
     <div>
       {/* <h1>My Dashboard</h1>
@@ -87,9 +104,9 @@ export default function Dashboard() {
           <div className="text-center text-white">
             <h1 className="display-4 fw-bolder">
               Shop in style
-              {params.user === " "
+              {/* {params.user === " "
                 ? ""
-                : `, ${capitalizeFirstLetter(params.user)}`}
+                : `, ${capitalizeFirstLetter(params.user)}`} */}
             </h1>
             <p className="lead fw-normal text-white-50 mb-0">
               With this shop hompeage template

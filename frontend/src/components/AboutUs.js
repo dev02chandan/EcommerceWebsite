@@ -29,7 +29,7 @@ function AboutUs() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
               <li className="nav-item">
-                <Link to="/dashboard/ " style={{ textDecoration: "None" }}>
+                <Link to="/dashboard" style={{ textDecoration: "None" }}>
                   <div className="nav-link h5" aria-current="page">
                     Home
                   </div>
@@ -39,7 +39,7 @@ function AboutUs() {
                 <div className="nav-link h5 active">About</div>
               </li>
               <li className="nav-item">
-                <Link to="/dashboard/ " style={{ textDecoration: "None" }}>
+                <Link to="/dashboard" style={{ textDecoration: "None" }}>
                   <div className="nav-link h5">Shop</div>
                 </Link>
               </li>
