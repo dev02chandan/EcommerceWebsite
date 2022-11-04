@@ -4,7 +4,7 @@ import "./components.css";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRef } from "react";
 import Axios from "axios";
 import pic1 from "../images/Picture1.png";
@@ -19,6 +19,7 @@ import pic8 from "../images/Picture8.png";
 
 export default function Dashboard() {
   const ref = useRef(null);
+  const [detail1, setDetail1] = useState(false);
 
   const handleClick = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -144,13 +145,23 @@ export default function Dashboard() {
                     {/* <!-- Product price--> */}
                     Rs. 2000
                   </div>
+                  {/* {setDetail1 === true ? (
+                    <div>Hello</div>
+                  ) : (
+                    <div>Hellow wordl</div>
+                  )} */}
                 </div>
                 {/* <!-- Product actions--> */}
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                   <div className="text-center">
-                    <div className="btn btn-outline-dark mt-auto">
+                    <button
+                      className="btn btn-outline-dark mt-auto"
+                      // onClick={() => {
+                      //   setDetail1(!detail1);
+                      // }}
+                    >
                       View details
-                    </div>
+                    </button>
                   </div>
                 </div>
               </div>
