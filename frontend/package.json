@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage":"https://dev02chandan.github.io/ecommercewebsite/",
+  "homepage": "https://dev02chandan.github.io/ecommercewebsite/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -13,7 +13,7 @@
     "popper.js": "^1.16.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.2",
+    "react-router-dom": "^6.4.3",
     "react-scripts": "^5.0.1",
     "startbootstrap-shop-homepage": "^5.0.5",
     "web-vitals": "^2.1.4"
@@ -21,8 +21,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy":"gh-pages -d build",
-    "predeploy":"npm run build",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
