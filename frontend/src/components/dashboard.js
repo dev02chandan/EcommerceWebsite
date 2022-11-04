@@ -56,7 +56,7 @@ export default function Dashboard() {
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container px-4 px-lg-5">
-          <div className="navbar-brand">
+          <div className="navbar-brand rotate">
             <img
               src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
               style={{ maxHeight: "50px" }}
@@ -128,12 +128,14 @@ export default function Dashboard() {
             <div className="col mb-5">
               <div className="card h-100 shadow">
                 {/* <!-- Product image--> */}
-                <img
-                  className="card-img-top"
-                  src={pic1}
-                  alt="..."
-                  style={{ maxHeight: 200 }}
-                />
+                <div className="hover-rotate">
+                  <img
+                    className="card-img-top"
+                    src={pic1}
+                    alt="..."
+                    style={{ maxHeight: 200, maxWidth: 250 }}
+                  />
+                </div>
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
@@ -163,12 +165,14 @@ export default function Dashboard() {
                   Sale
                 </div>
                 {/* <!-- Product image--> */}
-                <img
-                  className="card-img-top"
-                  src={pic2}
-                  alt="..."
-                  style={{ maxHeight: 200 }}
-                />
+                <div className="hover-rotate">
+                  <img
+                    className="card-img-top"
+                    src={pic2}
+                    alt="..."
+                    style={{ maxHeight: 200, maxWidth: 250 }}
+                  />
+                </div>
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
@@ -212,12 +216,14 @@ export default function Dashboard() {
                   Sale
                 </div>
                 {/* <!-- Product image--> */}
-                <img
-                  className="card-img-top"
-                  src={pic3}
-                  alt="..."
-                  style={{ maxHeight: 200 }}
-                />
+                <div className="hover-rotate">
+                  <img
+                    className="card-img-top"
+                    src={pic3}
+                    alt="..."
+                    style={{ maxHeight: 200, maxWidth: 250 }}
+                  />
+                </div>
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
@@ -247,12 +253,14 @@ export default function Dashboard() {
             <div className="col mb-5">
               <div className="card h-100 shadow">
                 {/* <!-- Product image--> */}
-                <img
-                  className="card-img-top"
-                  src={pic4}
-                  alt="..."
-                  style={{ maxHeight: 200 }}
-                />
+                <div className="hover-rotate">
+                  <img
+                    className="card-img-top"
+                    src={pic4}
+                    alt="..."
+                    style={{ maxHeight: 200, maxWidth: 250 }}
+                  />
+                </div>
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
@@ -295,12 +303,14 @@ export default function Dashboard() {
                   Sale
                 </div>
                 {/* <!-- Product image--> */}
-                <img
-                  className="card-img-top"
-                  src={pic5}
-                  alt="..."
-                  style={{ maxHeight: 200 }}
-                />
+                <div className="hover-rotate">
+                  <img
+                    className="card-img-top"
+                    src={pic5}
+                    alt="..."
+                    style={{ maxHeight: 200, maxWidth: 250 }}
+                  />
+                </div>
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
@@ -327,12 +337,14 @@ export default function Dashboard() {
             <div className="col mb-5">
               <div className="card h-100 shadow">
                 {/* <!-- Product image--> */}
-                <img
-                  className="card-img-top"
-                  src={pic6}
-                  alt="..."
-                  style={{ maxHeight: 200 }}
-                />
+                <div className="hover-rotate">
+                  <img
+                    className="card-img-top"
+                    src={pic6}
+                    alt="..."
+                    style={{ maxHeight: 200, maxWidth: 250 }}
+                  />
+                </div>
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
@@ -364,12 +376,14 @@ export default function Dashboard() {
                   Sale
                 </div>
                 {/* <!-- Product image--> */}
-                <img
-                  className="card-img-top"
-                  src={pic7}
-                  alt="..."
-                  style={{ maxHeight: 200 }}
-                />
+                <div className="hover-rotate">
+                  <img
+                    className="card-img-top"
+                    src={pic7}
+                    alt="..."
+                    style={{ maxHeight: 200, maxWidth: 250 }}
+                  />
+                </div>
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
@@ -406,12 +420,14 @@ export default function Dashboard() {
             <div className="col mb-5">
               <div className="card h-100 shadow">
                 {/* <!-- Product image--> */}
-                <img
-                  className="card-img-top"
-                  src={pic8}
-                  alt="..."
-                  style={{ maxHeight: 200 }}
-                />
+                <div className="hover-rotate">
+                  <img
+                    className="card-img-top"
+                    src={pic8}
+                    alt="..."
+                    style={{ maxHeight: 200, maxWidth: 250 }}
+                  />
+                </div>
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
@@ -446,7 +462,7 @@ export default function Dashboard() {
       <footer className="py-5 gradient-custom-2">
         <div className="container">
           <p className="m-0 text-center text-white">
-            Copyright &copy; Your Website 2022
+            Copyright &copy; The Lotus Team
           </p>
         </div>
       </footer>
