@@ -1,16 +1,21 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./components.css";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import { useEffect } from "react";
 import { useRef } from "react";
-import Axios from "axios"
+import Axios from "axios";
+import pic1 from "../images/Picture1.png";
+import pic2 from "../images/Picture2.png";
+import pic3 from "../images/Picture3.png";
+import pic4 from "../images/Picture4.png";
+import pic5 from "../images/Picture5.png";
+import pic6 from "../images/Picture6.png";
+import pic7 from "../images/Picture7.png";
+import pic8 from "../images/Picture8.png";
 // var axios = require('axios');
-
-
-
 
 export default function Dashboard() {
   const ref = useRef(null);
@@ -19,22 +24,24 @@ export default function Dashboard() {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+  // function capitalizeFirstLetter(string) {
+  //   return string.charAt(0).toUpperCase() + string.slice(1);
+  // }
   useEffect(() => {
     Axios.defaults.withCredentials = true;
-    Axios.get("https://ecommerce-auth-app.herokuapp.com/auth-endpoint").then((response) => {
-        console.log(response.data)
+    Axios.get("https://ecommerce-auth-app.herokuapp.com/auth-endpoint").then(
+      (response) => {
+        console.log(response.data);
         if (response.data.loggedIn === true) {
-console.log("some")
+          console.log("some");
         }
         // else
         // {
-        //   window.location.replace("http://localhost:3000");
+        //   window.location.replace("http://localhost:2000");
         // }
-    });
-}, []);
+      }
+    );
+  }, []);
   // let params = useParams();
   return (
     <div>
@@ -123,23 +130,24 @@ console.log("some")
                 {/* <!-- Product image--> */}
                 <img
                   className="card-img-top"
-                  src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                  src={pic1}
                   alt="..."
+                  style={{ maxHeight: 200 }}
                 />
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
                     {/* <!-- Product name--> */}
-                    <h5 className="fw-bolder">Fancy Product</h5>
+                    <h5 className="fw-bolder">Hair Dryer-Philips</h5>
                     {/* <!-- Product price--> */}
-                    $40.00 - $80.00
+                    Rs. 2000
                   </div>
                 </div>
                 {/* <!-- Product actions--> */}
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                   <div className="text-center">
                     <div className="btn btn-outline-dark mt-auto">
-                      View options
+                      View details
                     </div>
                   </div>
                 </div>
@@ -157,17 +165,20 @@ console.log("some")
                 {/* <!-- Product image--> */}
                 <img
                   className="card-img-top"
-                  src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                  src={pic2}
                   alt="..."
+                  style={{ maxHeight: 200 }}
                 />
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
                     {/* <!-- Product name--> */}
-                    <h5 className="fw-bolder">Special Item</h5>
+                    <h5 className="fw-bolder">Mobile: OnePlus Nord CE 2 5G</h5>
                     {/* <!-- Product reviews--> */}
                     <div className="d-flex justify-content-center small text-warning mb-2">
-                      <div className="bi-star-fill"></div>
+                      <div className="bi-star-fill">
+                        Lasted 2 years and counting without problems
+                      </div>
                       <div className="bi-star-fill"></div>
                       <div className="bi-star-fill"></div>
                       <div className="bi-star-fill"></div>
@@ -175,16 +186,17 @@ console.log("some")
                     </div>
                     {/* <!-- Product price--> */}
                     <span className="text-muted text-decoration-line-through">
-                      $20.00
+                      Rs.33000
                     </span>
-                    $18.00
+                    <br />
+                    Rs.28000
                   </div>
                 </div>
                 {/* <!-- Product actions--> */}
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                   <div className="text-center">
                     <div className="btn btn-outline-dark mt-auto">
-                      Add to cart
+                      View Details
                     </div>
                   </div>
                 </div>
@@ -202,19 +214,21 @@ console.log("some")
                 {/* <!-- Product image--> */}
                 <img
                   className="card-img-top"
-                  src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                  src={pic3}
                   alt="..."
+                  style={{ maxHeight: 200 }}
                 />
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
                     {/* <!-- Product name--> */}
-                    <h5 className="fw-bolder">Sale Item</h5>
+                    <h5 className="fw-bolder">Lenovo ThinkPad</h5>
                     {/* <!-- Product price--> */}
                     <span className="text-muted text-decoration-line-through">
-                      $50.00
+                      Rs. 30000
                     </span>
-                    $25.00
+                    <br />
+                    Rs. 24000
                   </div>
                 </div>
                 {/* <!-- Product actions--> */}
@@ -224,7 +238,7 @@ console.log("some")
                       className="btn btn-outline-dark mt-auto"
                       // style={{ top: 0.5 + "rem", right: 0.5 + "rem" }}
                     >
-                      Add to cart
+                      View Details
                     </div>
                   </div>
                 </div>
@@ -235,24 +249,27 @@ console.log("some")
                 {/* <!-- Product image--> */}
                 <img
                   className="card-img-top"
-                  src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                  src={pic4}
                   alt="..."
+                  style={{ maxHeight: 200 }}
                 />
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
                     {/* <!-- Product name--> */}
-                    <h5 className="fw-bolder">Popular Item</h5>
+                    <h5 className="fw-bolder">Nike Sport Shoes</h5>
                     {/* <!-- Product reviews--> */}
                     <div className="d-flex justify-content-center small text-warning mb-2">
-                      <div className="bi-star-fill"></div>
+                      <div className="bi-star-fill">
+                        Durable shoes for running
+                      </div>
                       <div className="bi-star-fill"></div>
                       <div className="bi-star-fill"></div>
                       <div className="bi-star-fill"></div>
                       <div className="bi-star-fill"></div>
                     </div>
                     {/* <!-- Product price--> */}
-                    $40.00
+                    Rs. 1500
                   </div>
                 </div>
                 {/* <!-- Product actions--> */}
@@ -262,7 +279,7 @@ console.log("some")
                       className="btn btn-outline-dark mt-auto"
                       // style={{ top: 0.5+"rem", right: 0.5+"rem" }}
                     >
-                      Add to cart
+                      View Details
                     </div>
                   </div>
                 </div>
@@ -280,26 +297,28 @@ console.log("some")
                 {/* <!-- Product image--> */}
                 <img
                   className="card-img-top"
-                  src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                  src={pic5}
                   alt="..."
+                  style={{ maxHeight: 200 }}
                 />
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
                     {/* <!-- Product name--> */}
-                    <h5 className="fw-bolder">Sale Item</h5>
+                    <h5 className="fw-bolder">Lavie Purse</h5>
                     {/* <!-- Product price--> */}
                     <span className="text-muted text-decoration-line-through">
-                      $50.00
+                      Rs.20000
                     </span>
-                    $25.00
+                    <br />
+                    Rs.10000
                   </div>
                 </div>
                 {/* <!-- Product actions--> */}
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                   <div className="text-center">
                     <div className="btn btn-outline-dark mt-auto">
-                      Add to cart
+                      View Details
                     </div>
                   </div>
                 </div>
@@ -310,23 +329,26 @@ console.log("some")
                 {/* <!-- Product image--> */}
                 <img
                   className="card-img-top"
-                  src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                  src={pic6}
                   alt="..."
+                  style={{ maxHeight: 200 }}
                 />
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
                     {/* <!-- Product name--> */}
-                    <h5 className="fw-bolder">Fancy Product</h5>
+                    <h5 className="fw-bolder">
+                      boAt Xtend Smartwatch with Alexa Built-in
+                    </h5>
                     {/* <!-- Product price--> */}
-                    $120.00 - $280.00
+                    Rs.3000
                   </div>
                 </div>
                 {/* <!-- Product actions--> */}
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                   <div className="text-center">
                     <div className="btn btn-outline-dark mt-auto">
-                      View options
+                      View details
                     </div>
                   </div>
                 </div>
@@ -344,17 +366,20 @@ console.log("some")
                 {/* <!-- Product image--> */}
                 <img
                   className="card-img-top"
-                  src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                  src={pic7}
                   alt="..."
+                  style={{ maxHeight: 200 }}
                 />
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
                     {/* <!-- Product name--> */}
-                    <h5 className="fw-bolder">Special Item</h5>
+                    <h5 className="fw-bolder">
+                      Haus & Kinder Floral Grace Bedsheet
+                    </h5>
                     {/* <!-- Product reviews--> */}
                     <div className="d-flex justify-content-center small text-warning mb-2">
-                      <div className="bi-star-fill"></div>
+                      <div className="bi-star-fill">Amazing Comfort</div>
                       <div className="bi-star-fill"></div>
                       <div className="bi-star-fill"></div>
                       <div className="bi-star-fill"></div>
@@ -362,16 +387,17 @@ console.log("some")
                     </div>
                     {/* <!-- Product price--> */}
                     <span className="text-muted text-decoration-line-through">
-                      $20.00
+                      Rs. 2000
                     </span>
-                    $18.00
+                    <br />
+                    Rs. 1300
                   </div>
                 </div>
                 {/* <!-- Product actions--> */}
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                   <div className="text-center">
                     <div className="btn btn-outline-dark mt-auto">
-                      Add to cart
+                      View Details
                     </div>
                   </div>
                 </div>
@@ -382,31 +408,32 @@ console.log("some")
                 {/* <!-- Product image--> */}
                 <img
                   className="card-img-top"
-                  src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                  src={pic8}
                   alt="..."
+                  style={{ maxHeight: 200 }}
                 />
                 {/* <!-- Product details--> */}
                 <div className="card-body p-4">
                   <div className="text-center">
                     {/* <!-- Product name--> */}
-                    <h5 className="fw-bolder">Popular Item</h5>
+                    <h5 className="fw-bolder">boAt BassHeads 225</h5>
                     {/* <!-- Product reviews--> */}
                     <div className="d-flex justify-content-center small text-warning mb-2">
-                      <div className="bi-star-fill"></div>
+                      <div className="bi-star-fill">Superb Sound Quality</div>
                       <div className="bi-star-fill"></div>
                       <div className="bi-star-fill"></div>
                       <div className="bi-star-fill"></div>
                       <div className="bi-star-fill"></div>
                     </div>
                     {/* <!-- Product price--> */}
-                    $40.00
+                    Rs. 799
                   </div>
                 </div>
                 {/* <!-- Product actions--> */}
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                   <div className="text-center">
                     <div className="btn btn-outline-dark mt-auto">
-                      Add to cart
+                      View Details
                     </div>
                   </div>
                 </div>
