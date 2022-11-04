@@ -10,25 +10,25 @@ import AboutUs from "./components/AboutUs";
 function App() {
   return (
     <div className="App">
-      <HashRouter>
-        <Switch>
-          <Route exact path="/">
-            <Login />
-          </Route>
-          <Route path="/signup">
-            <SignUp />
-          </Route>
-          <Route path="/dashboard">
-            <Dashboard></Dashboard>
-          </Route>
-          <Route path="/aboutus">
-            <AboutUs></AboutUs>
-          </Route>
-          <Route path="*">
-            <PageNotFound></PageNotFound>
-          </Route>
-        </Switch>
-      </HashRouter>
+      {/* <HashRouter> */}
+      <Switch>
+        <Route exact path="/">
+          <Login />
+        </Route>
+        <Route path="/signup">
+          <SignUp />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard></Dashboard>
+        </Route>
+        <Route path="/aboutus">
+          <AboutUs></AboutUs>
+        </Route>
+        <Route path="*">
+          <PageNotFound></PageNotFound>
+        </Route>
+      </Switch>
+      {/* </HashRouter> */}
     </div>
   );
 }
