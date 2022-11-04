@@ -8,7 +8,7 @@ function AboutUs() {
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container px-4 px-lg-5">
-          <div className="navbar-brand">
+          <div className="navbar-brand rotate">
             <img
               src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
               style={{ maxHeight: "50px" }}
