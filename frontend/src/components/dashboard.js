@@ -116,7 +116,7 @@ export default function Dashboard() {
                 : `, ${capitalizeFirstLetter(params.user)}`} */}
             </h1>
             <p className="lead fw-normal text-white-50 mb-0">
-              With this shop hompeage template
+              With The Lotus Team
             </p>
           </div>
         </div>
