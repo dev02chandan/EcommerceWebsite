@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Login from "./components/login";
 import Dashboard from "./components/dashboard";
 import PageNotFound from "./components/PageNotFound";
@@ -11,13 +11,23 @@ function App() {
   return (
     <div className="App">
       <HashRouter>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard></Dashboard>
+          </Route>
+          <Route path="/aboutus">
+            <AboutUs></AboutUs>
+          </Route>
+          <Route path="*">
+            <PageNotFound></PageNotFound>
+          </Route>
+        </Switch>
       </HashRouter>
     </div>
   );
