@@ -78,26 +78,37 @@ function AboutUs() {
       >
         <h1 className="display-5 fw-bolder new">Our Mission</h1>
         <p className="lead fw-normal mb-0">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
-          nemo, in sapiente, soluta accusantium aliquam repellendus quod ipsum
-          maiores atque necessitatibus omnis perferendis eius labore magnam unde
-          porro, quibusdam neque velit vitae iusto doloribus nihil. Veritatis
-          expedita, laborum corporis commodi eaque porro enim minus voluptates
-          possimus voluptatibus sapiente in accusamus provident, vero doloribus.
-          Quos!.
+          The Lotus Shop is a one stop shop for all your fashion and lifestyle
+          needs. Being India's largest e-commerce store for fashion and
+          lifestyle products, The Lotus Shop aims at providing a hassle free and
+          enjoyable shopping experience to shoppers across the country with the
+          widest range of brands and products on its portal. The brand is making
+          a conscious effort to bring the power of fashion to shoppers with an
+          array of the latest and trendiest products available in the country.
+          The Lotus Shop's value proposition revolves around giving consumers
+          the power and ease of purchasing fashion and lifestyle products
+          online. Offerings such as the largest in-season product catalogue,
+          100% authentic products, cash on delivery and 30 day return policy
+          make The Lotus Shop, the preferred shopping destination in the
+          country. To make online shopping easier for you, a dedicated customer
+          connect team is on standby to answer your queries 24x7.
         </p>
         <h1 className="display-5 fw-bolder new" style={{ marginTop: 70 }}>
           Our Vision
         </h1>
         <p className="lead fw-normal mb-0">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-          obcaecati deserunt sint nulla possimus sit mollitia cumque omnis eaque
-          eveniet earum animi nihil ipsum illum veritatis esse, quas qui,
-          delectus, voluptatibus officiis enim magnam laborum dolorem. Quasi
-          amet ab autem porro ipsum eius facilis, iusto, ad voluptas sunt id
-          eligendi quas vitae voluptate quod est sint cum! Magnam nisi, vero
-          repellat mollitia odio eos molestias explicabo in vitae, deleniti
-          numquam!
+          The Lotus Shop understands its shoppers' needs and caters to them with
+          choice of apparel, accessories, cosmetics and footwear from over 500
+          leading Indian and international brands. Prominent brands include
+          Adidas, Nike, Puma, Catwalk, Inc 5, United Colors of Benetton, FCUK,
+          Timberland, Avirate, FabIndia and Biba to name a few. You can also
+          shop from some recently introduced labels such as - Roadster, Sher
+          Singh, Dressberry, Kook N Keech and ETC. Recognitions Awarded 'Fashion
+          eRetailer of the Year 2013' by Franchise India – Indian eRetail Awards
+          Awarded 'Best E-commerce Website for 2012' by IAMAI – India Digital
+          Awards Awarded 'Images Most Admired Retailer of the Year: Non–Store
+          Retail' for 2012 by Images Group Awarded 'Best E-commerce Partner of
+          the year 2011-12' by Puma India
         </p>
       </div>
 
@@ -105,7 +116,7 @@ function AboutUs() {
       <footer className="py-5 gradient-custom-2" style={{ marginTop: "100px" }}>
         <div className="container">
           <p className="m-0 text-center text-white">
-            Copyright &copy; Your Website 2022
+            Copyright &copy; The Lotus Shop 2022
           </p>
         </div>
       </footer>
